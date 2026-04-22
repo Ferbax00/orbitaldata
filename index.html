@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="color-scheme" content="dark">
+    <title>ORBITALDATA S.A.S. | Soluciones Tecnológicas</title>
+
+    <link rel="icon" href="logo-2.png" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="breakpoints.css">
+</head>
+<body>
+
+    <canvas id="networkCanvas"></canvas>
+
+    <header id="main-header">
+        <nav class="container navbar" aria-label="Principal">
+            <a href="#inicio" class="logo" aria-label="ORBITALDATA — inicio">
+                <img src="logo-2.png" alt="" class="logo-img" decoding="async" fetchpriority="high">
+            </a>
+
+            <ul id="main-nav" class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Identidad</a></li>
+                <li><a href="#servicios">Soluciones</a></li>
+                <li><a href="#contacto" class="highlight">Contacto</a></li>
+            </ul>
+            <button type="button" class="hamburger" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main id="contenido-principal">
+    <section id="inicio" class="hero-section">
+        <div class="content-wrapper">
+            <div class="hero-logo-container" aria-hidden="false">
+                <svg id="orbitalLogo" viewBox="0 0 600 600" role="img" aria-label="Logo Orbital con anillos interactivos">
+                    <defs>
+                        <radialGradient id="g-glow" cx="50%" cy="40%">
+                            <stop offset="0%" stop-color="#00E8FF" stop-opacity="0.30"/>
+                            <stop offset="60%" stop-color="#00E8FF" stop-opacity="0.06"/>
+                            <stop offset="100%" stop-color="#00E8FF" stop-opacity="0.00"/>
+                        </radialGradient>
+                    </defs>
+
+                    <circle cx="300" cy="280" r="160" fill="url(#g-glow)" />
+
+                    <g class="rings" stroke-linecap="round" stroke-width="2" fill="none" stroke="#00E8FF">
+                        <ellipse class="ring ring-1" cx="300" cy="280" rx="220" ry="120" stroke-opacity="0.06"/>
+                        <ellipse class="ring ring-2" cx="300" cy="280" rx="180" ry="90" stroke-opacity="0.08"/>
+                        <ellipse class="ring ring-3" cx="300" cy="280" rx="130" ry="70" stroke-opacity="0.10"/>
+                    </g>
+
+                    <g id="nodes" fill="#00E8FF" stroke="#ffffff" stroke-opacity="0.06">
+                        <circle class="node n1" r="6" cx="520" cy="280" />
+                        <circle class="node n2" r="5" cx="140" cy="220" />
+                        <circle class="node n3" r="4" cx="360" cy="120" />
+                    </g>
+
+                    <g class="core">
+                        <circle cx="300" cy="280" r="62" fill="#021016" stroke="#00E8FF" stroke-opacity="0.16" stroke-width="1.5"/>
+                        <foreignObject x="238" y="218" width="124" height="124">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="core-wrap">
+                                <img src="LOGO%201.png" alt="Logo central OrbitalData" width="124" height="124" decoding="async" />
+                            </div>
+                        </foreignObject>
+                    </g>
+                </svg>
+            </div>
+            <h1 class="glitch" data-text="ORBITALDATA">ORBITALDATA</h1>
+            <div class="cta-group">
+                <a href="#nosotros" class="btn btn-primary">Nuestra Identidad</a>
+                <a href="#contacto" class="btn btn-outline">Cotizar Proyecto</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="section-padding alt-bg">
+        <div class="container">
+            <h2 class="section-title">Perfil Corporativo</h2>
+            
+            <div class="identity-intro glass-panel">
+                <p>
+                    <strong>ORBITALDATA S.A.S.</strong> es una sociedad comercial constituida bajo la Ley 1258 de 2008, con domicilio principal en el
+                    <strong>Archipiélago de San Andrés, Providencia y Santa Catalina</strong>. Nos dedicamos al <strong>desarrollo, comercialización,
+                    instalación y soporte integral</strong> de soluciones <strong>tecnológicas, de datos y de telecomunicaciones</strong>, acompañando a
+                    nuestros clientes desde la planificación hasta la operación en campo.
+                </p>
+            </div>
+
+            <div class="identity-grid">
+                <div class="id-card">
+                    <div class="id-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Objeto social</h3>
+                    <p>Soluciones tecnológicas, de datos y de telecomunicaciones con enfoque integral: desde el diagnóstico y el diseño hasta la puesta en marcha y el soporte continuo.</p>
+                </div>
+                <div class="id-card">
+                    <div class="id-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Actividades autorizadas</h3>
+                    <p>Desarrollamos de forma integral <strong>VSAT y telecomunicaciones</strong>, <strong>redes y seguridad</strong>, <strong>mantenimiento especializado</strong> y <strong>comercialización y suministro</strong>, según las necesidades de cada proyecto.</p>
+                </div>
+                <div class="id-card">
+                    <div class="id-icon"><i class="fas fa-infinity"></i></div>
+                    <h3>Amplitud y proyección</h3>
+                    <p>Asumimos actividades lícitas <strong>conexas o complementarias</strong> a nuestro objeto cuando aportan valor al cliente. Compañía de duración <strong>indefinida</strong>, con capacidad de operación y presencia en Colombia y el exterior.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Líneas de Negocio</h2>
+            <div class="grid-cards">
+                <div class="tech-card">
+                    <div class="icon-layer"><i class="fas fa-satellite-dish"></i></div>
+                    <h3>Telecomunicaciones (VSAT)</h3>
+                    <p>Conectividad y transmisión de datos por sistemas satelitales o terrestres; venta de capacidad de transmisión; instalación, puesta en marcha, mantenimiento y soporte de equipos VSAT y demás enlaces de comunicación.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="icon-layer"><i class="fas fa-network-wired"></i></div>
+                    <h3>Redes y seguridad</h3>
+                    <p>Planeación, diseño, suministro, instalación, configuración y soporte de LAN, WAN, VPN, cableado estructurado y fibra óptica; videovigilancia (CCTV) y control de acceso.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="icon-layer"><i class="fas fa-tools"></i></div>
+                    <h3>Mantenimiento técnico especializado</h3>
+                    <p>Mantenimientos preventivo, correctivo y predictivo; soporte técnico general y avanzado a servidores, equipos de cómputo, dispositivos de comunicación, hardware y software.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="icon-layer"><i class="fas fa-boxes-stacked"></i></div>
+                    <h3>Comercialización y suministro</h3>
+                    <p>Comercio al por mayor y menor; importación, exportación, distribución y venta de equipos de tecnología, informática y comunicaciones, hardware, software, licencias y materiales de instalación, en punto de venta o por plataformas electrónicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Centro de Operaciones</h2>
+            <div class="contact-wrapper glass-panel">
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <div>
+                            <h4>Sede Principal</h4>
+                            <p>Av 20 de Julio, Edificio Salgado, Apto 304<br>San Andrés Isla, Colombia.</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Contacto Digital</h4>
+                            <p>josfer38@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="contactForm" class="tech-form" method="post" action="#">
+                    <div class="input-group">
+                        <input type="text" id="nombre" name="nombre" required placeholder=" " autocomplete="name">
+                        <label for="nombre">Nombre / Razón Social</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" required placeholder=" " autocomplete="email">
+                        <label for="email">Email Corporativo</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="mensaje" name="mensaje" required placeholder=" " rows="5" autocomplete="off"></textarea>
+                        <label for="mensaje">Detalle del Requerimiento</label>
+                    </div>
+                    <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" title="Leave blank">
+                    <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+                    <p id="contactFormFeedback" class="form-feedback" role="status" aria-live="polite" hidden></p>
+                </form>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="LOGO%201.png" alt="ORBITALDATA" class="footer-logo-img">
+                </div>
+                <p class="footer-desc">
+                    Soluciones tecnológicas, de datos y de telecomunicaciones en el Caribe colombiano: VSAT, redes, mantenimiento especializado y comercialización.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                    <li><a href="#nosotros"><i class="fas fa-chevron-right"></i> Identidad</a></li>
+                    <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Soluciones</a></li>
+                    <li><a href="#contacto"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Conéctate</h4>
+                <div class="social-links-vertical">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-item fb">
+                        <span class="icon-box"><i class="fab fa-facebook-f"></i></span>
+                        <span class="social-text">Facebook</span>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-item in">
+                        <span class="icon-box"><i class="fab fa-linkedin-in"></i></span>
+                        <span class="social-text">LinkedIn</span>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-item ig">
+                        <span class="icon-box"><i class="fab fa-instagram"></i></span>
+                        <span class="social-text">Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 ORBITALDATA</p>
+        </div>
+    </footer>
+
+    <script src="network-effect.js"></script>
+    <script src="logo-interaction.js"></script>
+    <script src="interface.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>
