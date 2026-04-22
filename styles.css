@@ -465,7 +465,7 @@ button.btn-primary { width: 100%; margin: 10px 0 0; }
     object-fit: contain;
     object-position: left center;
     display: block;
-    border-radius: 6px;
+    border-radius: 4px;
 }
 .footer-desc {
     color: #94a3b8;
