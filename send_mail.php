@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $destinatario = 'josfer38@gmail.com';
 
-$asunto = 'Web ORBITALDATA — Nuevo requerimiento';
+$asunto = 'ORBITALDATA — Enviado desde la web';
 
 
 
