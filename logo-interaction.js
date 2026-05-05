@@ -39,14 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         requestAnimationFrame(rotate);
-    }
 
-    let pulse = 0;
-    setInterval(() => {
-        pulse = (pulse + 0.05) % (Math.PI * 2);
-        nodes.forEach((node, index) => {
-            const scale = 0.9 + Math.sin(pulse + index) * 0.08;
-            node.style.transform = `scale(${scale})`;
-        });
-    }, 80);
+        let pulse = 0;
+        setInterval(() => {
+            pulse = (pulse + 0.05) % (Math.PI * 2);
+            nodes.forEach((node, index) => {
+                const scale = 0.9 + Math.sin(pulse + index) * 0.08;
+                node.style.transform = `scale(${scale})`;
+            });
+        }, 80);
+    }
 });

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#1f1b2e">
     <meta name="color-scheme" content="dark">
     <title>ORBITALDATA S.A.S. | Soluciones Tecnológicas</title>
 
@@ -17,6 +17,10 @@
 <body>
 
     <canvas id="networkCanvas"></canvas>
+
+    <div class="scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progreso de lectura de la página">
+        <span class="scroll-progress-bar"></span>
+    </div>
 
     <header id="main-header">
         <nav class="container navbar" aria-label="Principal">
@@ -43,28 +47,33 @@
                 <svg id="orbitalLogo" viewBox="0 0 600 600" role="img" aria-label="Logo Orbital con anillos interactivos">
                     <defs>
                         <radialGradient id="g-glow" cx="50%" cy="40%">
-                            <stop offset="0%" stop-color="#00E8FF" stop-opacity="0.30"/>
-                            <stop offset="60%" stop-color="#00E8FF" stop-opacity="0.06"/>
-                            <stop offset="100%" stop-color="#00E8FF" stop-opacity="0.00"/>
+                            <stop offset="0%" stop-color="#34e8d4" stop-opacity="0.30"/>
+                            <stop offset="45%" stop-color="#c4b5fd" stop-opacity="0.14"/>
+                            <stop offset="100%" stop-color="#ffb020" stop-opacity="0.00"/>
                         </radialGradient>
+                        <linearGradient id="orbit-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#34e8d4"/>
+                            <stop offset="50%" stop-color="#c4b5fd"/>
+                            <stop offset="100%" stop-color="#ffb020"/>
+                        </linearGradient>
                     </defs>
 
                     <circle cx="300" cy="280" r="160" fill="url(#g-glow)" />
 
-                    <g class="rings" stroke-linecap="round" stroke-width="2" fill="none" stroke="#00E8FF">
+                    <g class="rings" stroke-linecap="round" stroke-width="2" fill="none" stroke="url(#orbit-stroke)">
                         <ellipse class="ring ring-1" cx="300" cy="280" rx="220" ry="120" stroke-opacity="0.06"/>
                         <ellipse class="ring ring-2" cx="300" cy="280" rx="180" ry="90" stroke-opacity="0.08"/>
                         <ellipse class="ring ring-3" cx="300" cy="280" rx="130" ry="70" stroke-opacity="0.10"/>
                     </g>
 
-                    <g id="nodes" fill="#00E8FF" stroke="#ffffff" stroke-opacity="0.06">
+                    <g id="nodes" fill="url(#orbit-stroke)" stroke="#ffffff" stroke-opacity="0.08">
                         <circle class="node n1" r="6" cx="520" cy="280" />
                         <circle class="node n2" r="5" cx="140" cy="220" />
                         <circle class="node n3" r="4" cx="360" cy="120" />
                     </g>
 
                     <g class="core">
-                        <circle cx="300" cy="280" r="62" fill="#021016" stroke="#00E8FF" stroke-opacity="0.16" stroke-width="1.5"/>
+                        <circle cx="300" cy="280" r="62" fill="#161328" stroke="url(#orbit-stroke)" stroke-opacity="0.38" stroke-width="1.5"/>
                         <foreignObject x="238" y="218" width="124" height="124">
                             <div xmlns="http://www.w3.org/1999/xhtml" class="core-wrap">
                                 <img src="LOGO%201.png" alt="Logo central OrbitalData" width="124" height="124" decoding="async" />
@@ -74,6 +83,7 @@
                 </svg>
             </div>
             <h1 class="glitch" data-text="ORBITALDATA">ORBITALDATA</h1>
+            <p class="hero-kicker">Telecomunicaciones · Redes · Datos · campo y operación</p>
             <div class="cta-group">
                 <a href="#nosotros" class="btn btn-primary">Nuestra Identidad</a>
                 <a href="#contacto" class="btn btn-outline">Cotizar Proyecto</a>
@@ -82,7 +92,7 @@
     </section>
 
     <section id="nosotros" class="section-padding alt-bg">
-        <div class="container">
+        <div class="container reveal">
             <h2 class="section-title">Perfil Corporativo</h2>
             
             <div class="identity-intro glass-panel">
@@ -115,7 +125,7 @@
     </section>
 
     <section id="servicios" class="section-padding">
-        <div class="container">
+        <div class="container reveal">
             <h2 class="section-title">Líneas de Negocio</h2>
             <div class="grid-cards">
                 <div class="tech-card">
@@ -143,9 +153,9 @@
     </section>
 
     <section id="contacto" class="section-padding">
-        <div class="container">
+        <div class="container reveal">
             <h2 class="section-title">Centro de Operaciones</h2>
-            <div class="contact-wrapper glass-panel">
+            <div class="contact-wrapper">
                 <div class="contact-details">
                     <div class="detail-item">
                         <i class="fas fa-map-marked-alt"></i>
@@ -189,7 +199,7 @@
         <div class="container footer-grid">
             <div class="footer-col">
                 <div class="footer-logo">
-                    <img src="logo-2.png" alt="ORBITALDATA" class="footer-logo-img">
+                    <img src="logo-3.png" alt="ORBITALDATA" class="footer-logo-img">
                 </div>
                 <p class="footer-desc">
                     Soluciones tecnológicas, de datos y de telecomunicaciones en el Caribe colombiano: VSAT, redes, mantenimiento especializado y comercialización.
@@ -229,6 +239,10 @@
             <p>&copy; 2026 ORBITALDATA</p>
         </div>
     </footer>
+
+    <button type="button" class="back-to-top" aria-label="Volver al inicio de la página">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
 
     <script src="network-effect.js"></script>
     <script src="logo-interaction.js"></script>
