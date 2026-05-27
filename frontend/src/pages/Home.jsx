@@ -4,8 +4,8 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Badge } from '../components/ui/badge';
-import { Satellite, Network, Shield, Wrench, ShoppingCart, MapPin, Mail, Phone } from 'lucide-react';
-import { submitContactForm } from '../services/mock';
+import { Satellite, Network, Shield, Wrench, ShoppingCart, MapPin, Mail, Phone, Award } from 'lucide-react';
+import { submitContactForm } from '../services/api';
 import { toast } from 'sonner';
 
 const Home = () => {
@@ -29,7 +29,7 @@ const Home = () => {
       toast.success('Solicitud enviada exitosamente');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      toast.error('Error al enviar la solicitud');
+      toast.error(error.message || 'Error al enviar la solicitud');
     } finally {
       setIsSubmitting(false);
     }
@@ -211,8 +211,46 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Socios Tecnológicos */}
+      <section className="py-20 px-6 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <Award className="w-12 h-12 text-cyan-600 mx-auto mb-4" />
+            <h3 className="text-4xl font-bold text-slate-900 mb-4">Socios Tecnológicos</h3>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Trabajamos con los mejores proveedores tecnológicos del mercado
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-12 max-w-4xl mx-auto">
+            {/* Hikvision */}
+            <div className="group transition-all duration-300 hover:scale-110">
+              <div className="bg-white p-8 rounded-2xl border-2 border-slate-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300">
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Hikvision_logo.svg/320px-Hikvision_logo.svg.png" 
+                  alt="Hikvision Logo" 
+                  className="h-16 w-auto grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <p className="text-center mt-4 text-sm font-semibold text-slate-700">Soluciones de Videovigilancia</p>
+            </div>
+            
+            {/* Syscom Colombia */}
+            <div className="group transition-all duration-300 hover:scale-110">
+              <div className="bg-white p-8 rounded-2xl border-2 border-slate-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300">
+                <img 
+                  src="https://syscom.mx/images/logo_syscom.png" 
+                  alt="Syscom Colombia Logo" 
+                  className="h-16 w-auto grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <p className="text-center mt-4 text-sm font-semibold text-slate-700">Distribuidor Tecnológico</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Centro de Operaciones y Contacto */}
-      <section id="contacto" className="py-20 px-6 bg-white">
+      <section id="contacto" className="py-20 px-6 bg-slate-50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h3 className="text-4xl font-bold text-slate-900 mb-4">Centro de Operaciones</h3>
