@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORBITALDATA — Administración</title>
+    <script src="api-config.js"></script>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #0f172a; color: #e2e8f0; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 1rem; text-align: center; }
+        a { color: #34e8d4; }
+        .box { max-width: 420px; background: #1e293b; padding: 2rem; border-radius: 12px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p id="msg">Redirigiendo al panel de administración…</p>
+    </div>
+    <script>
+        (function () {
+            var base = (window.ORBITAL_API_URL || '').replace(/\/$/, '');
+            if (!base) {
+                document.getElementById('msg').innerHTML =
+                    'Configure <strong>api-config.js</strong> con la URL de su backend (Render).<br><br>' +
+                    'Ejemplo:<br><code>window.ORBITAL_API_URL = \'https://orbitaldata-api.onrender.com\';</code><br><br>' +
+                    'El panel <strong>no</strong> está en GitHub Pages; vive en el servidor de la API.';
+                return;
+            }
+            window.location.replace(base + '/admin/login');
+        })();
+    </script>
+</body>
+</html>
